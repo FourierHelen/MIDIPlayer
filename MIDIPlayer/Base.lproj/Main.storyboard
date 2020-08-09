@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1o2-l0-dnc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-cg-pQc">
+                                <rect key="frame" x="70.5" y="688.5" width="273" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps4-e2-dv2">
+                                <rect key="frame" x="26.5" y="693" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTv-7I-1pf">
+                                <rect key="frame" x="351.5" y="693" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mk6-rM-N43">
+                                <rect key="frame" x="174" y="776" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mk6-rM-N43" secondAttribute="height" id="Qmf-Dd-rOK"/>
+                                </constraints>
+                                <state key="normal" image="Start.png"/>
+                                <connections>
+                                    <action selector="StopPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5do-NC-T8F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVG-4o-d5b">
+                                <rect key="frame" x="78.5" y="784" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tVG-4o-d5b" secondAttribute="height" id="HeR-g3-nel"/>
+                                </constraints>
+                                <state key="normal" title="Slow"/>
+                                <connections>
+                                    <action selector="SlowPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oF2-t2-sev"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDV-ZY-c3Z">
+                                <rect key="frame" x="285.5" y="784" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nDV-ZY-c3Z" secondAttribute="height" id="JAB-pn-8YN"/>
+                                </constraints>
+                                <state key="normal" title="Fast"/>
+                                <connections>
+                                    <action selector="FastPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fvu-pi-fz0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1fK-cg-pQc" secondAttribute="bottom" multiplier="1.2" id="3M4-Ia-4fC"/>
+                            <constraint firstItem="tVG-4o-d5b" firstAttribute="centerY" secondItem="mk6-rM-N43" secondAttribute="centerY" id="5Vg-1U-QKr"/>
+                            <constraint firstItem="nDV-ZY-c3Z" firstAttribute="centerY" secondItem="mk6-rM-N43" secondAttribute="centerY" id="70k-qH-8bi"/>
+                            <constraint firstItem="tVG-4o-d5b" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="8KI-hd-Ycf"/>
+                            <constraint firstItem="1fK-cg-pQc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" id="9BM-jD-yQL"/>
+                            <constraint firstItem="nDV-ZY-c3Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="1.5" id="Ahx-L9-OpV"/>
+                            <constraint firstItem="1o2-l0-dnc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C69-RB-k0G"/>
+                            <constraint firstItem="1fK-cg-pQc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EOo-O5-69l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1o2-l0-dnc" secondAttribute="trailing" id="EUD-Oz-Hev"/>
+                            <constraint firstItem="1o2-l0-dnc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Gw9-na-fEJ"/>
+                            <constraint firstItem="mk6-rM-N43" firstAttribute="top" secondItem="1fK-cg-pQc" secondAttribute="bottom" multiplier="1.08" id="JFz-4Y-WB0"/>
+                            <constraint firstItem="1fK-cg-pQc" firstAttribute="leading" secondItem="Ps4-e2-dv2" secondAttribute="trailing" constant="10" id="Rms-3O-5Kf"/>
+                            <constraint firstItem="1o2-l0-dnc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TRL-Do-424"/>
+                            <constraint firstItem="nDV-ZY-c3Z" firstAttribute="width" secondItem="tVG-4o-d5b" secondAttribute="width" id="WEO-9m-gtA"/>
+                            <constraint firstItem="Ps4-e2-dv2" firstAttribute="centerY" secondItem="1fK-cg-pQc" secondAttribute="centerY" id="d4D-7F-o1d"/>
+                            <constraint firstItem="tVG-4o-d5b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.12" id="hhx-fP-lUW"/>
+                            <constraint firstItem="mTv-7I-1pf" firstAttribute="leading" secondItem="1fK-cg-pQc" secondAttribute="trailing" constant="10" id="iXq-nR-HfJ"/>
+                            <constraint firstItem="mk6-rM-N43" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.16" id="iuY-W4-xGH"/>
+                            <constraint firstItem="mTv-7I-1pf" firstAttribute="centerY" secondItem="1fK-cg-pQc" secondAttribute="centerY" id="jyP-B5-C9b"/>
+                            <constraint firstItem="mk6-rM-N43" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oSL-Tl-Xmz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="Ps4-e2-dv2" id="rEk-w0-9YJ"/>
+                        <outlet property="fastButton" destination="nDV-ZY-c3Z" id="eUJ-bx-64h"/>
+                        <outlet property="playButton" destination="mk6-rM-N43" id="AHx-IQ-jTR"/>
+                        <outlet property="progressSlider" destination="1fK-cg-pQc" id="gef-1i-W2M"/>
+                        <outlet property="slowButton" destination="tVG-4o-d5b" id="c61-Pp-VUD"/>
+                        <outlet property="songTableView" destination="1o2-l0-dnc" id="KHM-sV-DGX"/>
+                        <outlet property="totalTimeLabel" destination="mTv-7I-1pf" id="O5f-jP-Cpv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Start.png" width="162" height="162"/>
+    </resources>
+</document>
